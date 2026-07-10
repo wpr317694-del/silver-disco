@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title data-en="My Portfolio" data-zh="我的个人主页">我的个人主页</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -15,17 +15,25 @@
         <div class="nav-container">
             <a href="#" class="nav-logo">Portfolio</a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-en="Home" data-zh="首页">首页</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-zh="关于">关于</a></li>
+                <li><a href="#skills" class="nav-link" data-en="Skills" data-zh="技能">技能</a></li>
+                <li><a href="#projects" class="nav-link" data-en="Projects" data-zh="项目">项目</a></li>
+                <li><a href="#blog" class="nav-link" data-en="Blog" data-zh="文章">文章</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-zh="联系">联系</a></li>
             </ul>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+                    <span class="lang-option" data-lang="zh">中</span>
+                    <span class="lang-divider">/</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -33,19 +41,25 @@
     <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-name">Your Name</h1>
-                <h2 class="hero-title">Full Stack Developer</h2>
-                <p class="hero-description">
-                    I build modern web applications with clean code and great user experiences.
+                <p class="hero-greeting" data-en="Hello, I'm" data-zh="你好，我是">你好，我是</p>
+                <!-- 占位：把「你的名字」换成你的中文名，英文名放在 data-en -->
+                <h1 class="hero-name" data-en="Your Name" data-zh="你的名字">你的名字</h1>
+                <!-- 占位：你的职位 / 头衔 -->
+                <h2 class="hero-title" data-en="Your Title / Role" data-zh="你的职位 / 头衔">你的职位 / 头衔</h2>
+                <!-- 占位：一句话自我介绍 -->
+                <p class="hero-description"
+                   data-en="A short one-line introduction about yourself and what you do."
+                   data-zh="用一句话介绍你自己以及你所做的事情。">
+                    用一句话介绍你自己以及你所做的事情。
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    <a href="#projects" class="btn btn-primary" data-en="View Projects" data-zh="查看项目">查看项目</a>
+                    <a href="#contact" class="btn btn-secondary" data-en="Contact Me" data-zh="联系我">联系我</a>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="hero-avatar">
+                    <!-- 占位：把头像图片放这里，例如 <img src="avatar.jpg" alt="头像"> -->
                     <div class="avatar-placeholder">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
@@ -57,7 +71,7 @@
         </div>
         <div class="hero-scroll">
             <a href="#about" class="scroll-indicator">
-                <span>Scroll Down</span>
+                <span data-en="Scroll Down" data-zh="向下滚动">向下滚动</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 5v14M5 12l7 7 7-7"/>
                 </svg>
@@ -68,30 +82,31 @@
     <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title" data-en="About Me" data-zh="关于我">关于我</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        I'm a passionate developer who loves creating elegant solutions to complex problems. 
-                        With experience in both frontend and backend development, I enjoy building 
-                        full-stack applications that make a difference.
+                    <!-- 占位：个人介绍第一段 -->
+                    <p data-en="Write a paragraph about yourself here — your background, what you're passionate about, and your professional focus."
+                       data-zh="在这里写一段关于你的介绍——你的背景、你热爱的事情，以及你的专业方向。">
+                        在这里写一段关于你的介绍——你的背景、你热爱的事情，以及你的专业方向。
                     </p>
-                    <p>
-                        When I'm not coding, you can find me exploring new technologies, 
-                        contributing to open source projects, or sharing knowledge with the developer community.
+                    <!-- 占位：个人介绍第二段 -->
+                    <p data-en="Add a second paragraph about your experience, interests, or what you're currently working on."
+                       data-zh="再写一段关于你的经历、兴趣，或你目前正在做的事情。">
+                        再写一段关于你的经历、兴趣，或你目前正在做的事情。
                     </p>
                     <div class="about-stats">
                         <div class="stat">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Experience</span>
+                            <span class="stat-number">0+</span>
+                            <span class="stat-label" data-en="Years Experience" data-zh="年经验">年经验</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">20+</span>
-                            <span class="stat-label">Projects Completed</span>
+                            <span class="stat-number">0+</span>
+                            <span class="stat-label" data-en="Projects" data-zh="项目数">项目数</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Technologies</span>
+                            <span class="stat-number">0+</span>
+                            <span class="stat-label" data-en="Technologies" data-zh="技术栈">技术栈</span>
                         </div>
                     </div>
                 </div>
@@ -102,7 +117,7 @@
     <!-- Skills Section -->
     <section class="section section-alt" id="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title" data-en="Skills" data-zh="技能">技能</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">
@@ -110,8 +125,9 @@
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3>Frontend</h3>
-                    <p>HTML, CSS, JavaScript, React, Vue.js, TypeScript</p>
+                    <h3 data-en="Frontend" data-zh="前端">前端</h3>
+                    <!-- 占位：前端技能列表 -->
+                    <p data-en="e.g. HTML, CSS, JavaScript, React, Vue" data-zh="例如：HTML、CSS、JavaScript、React、Vue">例如：HTML、CSS、JavaScript、React、Vue</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
@@ -121,8 +137,9 @@
                             <line x1="12" y1="17" x2="12" y2="21"/>
                         </svg>
                     </div>
-                    <h3>Backend</h3>
-                    <p>Node.js, Python, Go, RESTful APIs, GraphQL</p>
+                    <h3 data-en="Backend" data-zh="后端">后端</h3>
+                    <!-- 占位：后端技能列表 -->
+                    <p data-en="e.g. Node.js, Python, Go, APIs" data-zh="例如：Node.js、Python、Go、API">例如：Node.js、Python、Go、API</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
@@ -132,8 +149,9 @@
                             <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
                         </svg>
                     </div>
-                    <h3>Database</h3>
-                    <p>PostgreSQL, MySQL, MongoDB, Redis</p>
+                    <h3 data-en="Database" data-zh="数据库">数据库</h3>
+                    <!-- 占位：数据库技能列表 -->
+                    <p data-en="e.g. PostgreSQL, MySQL, MongoDB" data-zh="例如：PostgreSQL、MySQL、MongoDB">例如：PostgreSQL、MySQL、MongoDB</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
@@ -142,8 +160,9 @@
                             <line x1="4" y1="22" x2="4" y2="15"/>
                         </svg>
                     </div>
-                    <h3>DevOps</h3>
-                    <p>Docker, CI/CD, AWS, Linux, Git</p>
+                    <h3 data-en="Tools & DevOps" data-zh="工具与运维">工具与运维</h3>
+                    <!-- 占位：工具/运维技能列表 -->
+                    <p data-en="e.g. Docker, Git, AWS, Linux" data-zh="例如：Docker、Git、AWS、Linux">例如：Docker、Git、AWS、Linux</p>
                 </div>
             </div>
         </div>
@@ -152,26 +171,28 @@
     <!-- Projects Section -->
     <section class="section" id="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title" data-en="Projects" data-zh="项目">项目</h2>
             <div class="projects-grid">
+                <!-- 占位：项目 1 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">Project 1</div>
+                        <div class="project-placeholder" data-en="Project 1" data-zh="项目 1">项目 1</div>
                     </div>
                     <div class="project-info">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with payment integration and admin dashboard.</p>
+                        <h3 data-en="Project Name" data-zh="项目名称">项目名称</h3>
+                        <p data-en="A short description of what this project does and the problem it solves."
+                           data-zh="简要描述这个项目的功能以及它解决的问题。">简要描述这个项目的功能以及它解决的问题。</p>
                         <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
+                            <span class="tag">Tag</span>
+                            <span class="tag">Tag</span>
+                            <span class="tag">Tag</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                                 </svg>
-                                Code
+                                <span data-en="Code" data-zh="代码">代码</span>
                             </a>
                             <a href="#" class="project-link">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -179,29 +200,31 @@
                                     <polyline points="15 3 21 3 21 9"/>
                                     <line x1="10" y1="14" x2="21" y2="3"/>
                                 </svg>
-                                Demo
+                                <span data-en="Demo" data-zh="演示">演示</span>
                             </a>
                         </div>
                     </div>
                 </div>
+                <!-- 占位：项目 2 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">Project 2</div>
+                        <div class="project-placeholder" data-en="Project 2" data-zh="项目 2">项目 2</div>
                     </div>
                     <div class="project-info">
-                        <h3>Task Management App</h3>
-                        <p>A collaborative task management tool with real-time updates and team features.</p>
+                        <h3 data-en="Project Name" data-zh="项目名称">项目名称</h3>
+                        <p data-en="A short description of what this project does and the problem it solves."
+                           data-zh="简要描述这个项目的功能以及它解决的问题。">简要描述这个项目的功能以及它解决的问题。</p>
                         <div class="project-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Tag</span>
+                            <span class="tag">Tag</span>
+                            <span class="tag">Tag</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                                 </svg>
-                                Code
+                                <span data-en="Code" data-zh="代码">代码</span>
                             </a>
                             <a href="#" class="project-link">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -209,29 +232,31 @@
                                     <polyline points="15 3 21 3 21 9"/>
                                     <line x1="10" y1="14" x2="21" y2="3"/>
                                 </svg>
-                                Demo
+                                <span data-en="Demo" data-zh="演示">演示</span>
                             </a>
                         </div>
                     </div>
                 </div>
+                <!-- 占位：项目 3 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">Project 3</div>
+                        <div class="project-placeholder" data-en="Project 3" data-zh="项目 3">项目 3</div>
                     </div>
                     <div class="project-info">
-                        <h3>Weather Dashboard</h3>
-                        <p>A beautiful weather app with forecasts, maps, and location-based alerts.</p>
+                        <h3 data-en="Project Name" data-zh="项目名称">项目名称</h3>
+                        <p data-en="A short description of what this project does and the problem it solves."
+                           data-zh="简要描述这个项目的功能以及它解决的问题。">简要描述这个项目的功能以及它解决的问题。</p>
                         <div class="project-tags">
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">API</span>
-                            <span class="tag">Charts</span>
+                            <span class="tag">Tag</span>
+                            <span class="tag">Tag</span>
+                            <span class="tag">Tag</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                                 </svg>
-                                Code
+                                <span data-en="Code" data-zh="代码">代码</span>
                             </a>
                             <a href="#" class="project-link">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -239,7 +264,7 @@
                                     <polyline points="15 3 21 3 21 9"/>
                                     <line x1="10" y1="14" x2="21" y2="3"/>
                                 </svg>
-                                Demo
+                                <span data-en="Demo" data-zh="演示">演示</span>
                             </a>
                         </div>
                     </div>
@@ -248,15 +273,46 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section section-alt" id="contact">
+    <!-- Blog / Articles Section -->
+    <section class="section section-alt" id="blog">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title" data-en="Blog" data-zh="文章">文章</h2>
+            <p class="section-subtitle"
+               data-en="Thoughts, notes, and articles I've written."
+               data-zh="我写的一些想法、笔记和文章。">我写的一些想法、笔记和文章。</p>
+            <div class="blog-grid">
+                <!-- 占位：文章 1 —— 复制这个 <a> 块即可新增文章，把 href 指向文章页面 -->
+                <a href="#" class="blog-card">
+                    <div class="blog-date" data-en="Jan 1, 2026" data-zh="2026年1月1日">2026年1月1日</div>
+                    <h3 class="blog-title" data-en="Article Title" data-zh="文章标题">文章标题</h3>
+                    <p class="blog-excerpt"
+                       data-en="A short preview of the article content goes here..."
+                       data-zh="这里是文章内容的简短预览……">这里是文章内容的简短预览……</p>
+                    <span class="blog-readmore" data-en="Read more →" data-zh="阅读全文 →">阅读全文 →</span>
+                </a>
+                <!-- 占位：文章 2 -->
+                <a href="#" class="blog-card">
+                    <div class="blog-date" data-en="Jan 1, 2026" data-zh="2026年1月1日">2026年1月1日</div>
+                    <h3 class="blog-title" data-en="Article Title" data-zh="文章标题">文章标题</h3>
+                    <p class="blog-excerpt"
+                       data-en="A short preview of the article content goes here..."
+                       data-zh="这里是文章内容的简短预览……">这里是文章内容的简短预览……</p>
+                    <span class="blog-readmore" data-en="Read more →" data-zh="阅读全文 →">阅读全文 →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Get In Touch" data-zh="联系我">联系我</h2>
             <div class="contact-content">
-                <p class="contact-description">
-                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of something amazing.
-                </p>
+                <p class="contact-description"
+                   data-en="I'm always open to new opportunities and interesting conversations. Feel free to reach out!"
+                   data-zh="我随时欢迎新的机会和有趣的交流，欢迎联系我！">我随时欢迎新的机会和有趣的交流，欢迎联系我！</p>
                 <div class="contact-links">
+                    <!-- 占位：邮箱地址 -->
                     <a href="mailto:your.email@example.com" class="contact-item">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -264,19 +320,21 @@
                         </svg>
                         <span>your.email@example.com</span>
                     </a>
-                    <a href="https://github.com/yourusername" target="_blank" class="contact-item">
+                    <!-- 占位：GitHub 链接 -->
+                    <a href="https://github.com/wpr317694-del" target="_blank" class="contact-item">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                         </svg>
                         <span>GitHub</span>
                     </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-item">
+                    <!-- 占位：其它社交/联系方式（可选） -->
+                    <a href="#" class="contact-item">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                             <rect x="2" y="9" width="4" height="12"/>
                             <circle cx="4" cy="4" r="2"/>
                         </svg>
-                        <span>LinkedIn</span>
+                        <span data-en="LinkedIn / Other" data-zh="领英 / 其它">领英 / 其它</span>
                     </a>
                 </div>
             </div>
@@ -286,7 +344,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Your Name. Built with passion.</p>
+            <p data-en="&copy; 2026 Your Name. Built with passion." data-zh="&copy; 2026 你的名字。用心打造。">&copy; 2026 你的名字。用心打造。</p>
         </div>
     </footer>
 

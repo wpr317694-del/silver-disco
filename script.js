@@ -1,3 +1,47 @@
+// ===== Language Toggle (中文 / English) =====
+const LANG_KEY = 'preferred-lang';
+
+function applyLanguage(lang) {
+    // Update every element that has translations
+    document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+        const value = el.getAttribute('data-' + lang);
+        if (value !== null) {
+            // Support entities like &copy; by using innerHTML
+            el.innerHTML = value;
+        }
+    });
+
+    // Update <html lang> and page direction
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+    document.body.classList.toggle('lang-zh', lang === 'zh');
+    document.body.classList.toggle('lang-en', lang === 'en');
+
+    // Highlight active option in the toggle
+    document.querySelectorAll('.lang-option').forEach(opt => {
+        opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+    });
+
+    // Persist choice
+    localStorage.setItem(LANG_KEY, lang);
+}
+
+function initLanguage() {
+    // Priority: saved choice > browser language > default zh
+    let lang = localStorage.getItem(LANG_KEY);
+    if (!lang) {
+        lang = (navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en';
+    }
+    applyLanguage(lang);
+
+    const toggle = document.getElementById('lang-toggle');
+    if (toggle) {
+        toggle.addEventListener('click', () => {
+            const current = localStorage.getItem(LANG_KEY) || 'zh';
+            applyLanguage(current === 'zh' ? 'en' : 'zh');
+        });
+    }
+}
+
 // ===== Navbar Scroll Effect =====
 const navbar = document.getElementById('navbar');
 
@@ -53,7 +97,7 @@ window.addEventListener('scroll', updateActiveNav);
 // ===== Scroll Animations =====
 function initScrollAnimations() {
     const elements = document.querySelectorAll(
-        '.skill-card, .project-card, .stat, .contact-item, .about-text'
+        '.skill-card, .project-card, .blog-card, .stat, .contact-item, .about-text'
     );
 
     elements.forEach(el => el.classList.add('fade-in'));
@@ -78,9 +122,11 @@ function initScrollAnimations() {
 // ===== Smooth Scroll for Safari =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
         if (target) {
+            e.preventDefault();
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -91,6 +137,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', () => {
+    initLanguage();
     initScrollAnimations();
     updateActiveNav();
 });
