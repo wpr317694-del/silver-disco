@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Hello World — My First Post" data-zh="Hello World —— 我的第一篇文章">Hello World —— 我的第一篇文章</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Portfolio</a>
+            <div class="nav-actions">
+                <a href="../index.html#blog" class="article-back" data-en="← All articles" data-zh="← 返回文章列表">← 返回文章列表</a>
+                <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+                    <span class="lang-option" data-lang="zh">中</span>
+                    <span class="lang-divider">/</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <article class="article">
+        <header class="article-header">
+            <div class="article-date" data-en="July 10, 2026" data-zh="2026年7月10日">2026年7月10日</div>
+            <h1 class="article-title" data-en="Hello World — My First Post" data-zh="Hello World —— 我的第一篇文章">Hello World —— 我的第一篇文章</h1>
+        </header>
+
+        <div class="article-body">
+            <p data-en="Welcome to my blog! This is a sample article showing how posts look on this site. Everything supports the same Chinese / English toggle as the homepage — try the button in the top-right corner."
+               data-zh="欢迎来到我的博客！这是一篇示例文章，用来展示文章在网站上的样子。所有内容都支持和首页一样的中英文切换——试试右上角的按钮。">
+               欢迎来到我的博客！这是一篇示例文章，用来展示文章在网站上的样子。所有内容都支持和首页一样的中英文切换——试试右上角的按钮。
+            </p>
+
+            <h2 data-en="How to add a new article" data-zh="如何新增一篇文章">如何新增一篇文章</h2>
+            <p data-en="Copy the template file, write your content, and link to it from the homepage. That's it — no build tools, no Markdown, just HTML."
+               data-zh="复制模板文件，写好你的内容，然后在首页加一个链接指向它。就这么简单——不需要构建工具，不需要 Markdown，纯 HTML。">
+               复制模板文件，写好你的内容，然后在首页加一个链接指向它。就这么简单——不需要构建工具，不需要 Markdown，纯 HTML。
+            </p>
+
+            <blockquote data-en="Simple is better than complex." data-zh="简单胜于复杂。">
+                简单胜于复杂。
+            </blockquote>
+
+            <h2 data-en="You can write code too" data-zh="也可以写代码">也可以写代码</h2>
+            <pre><code>console.log("Hello, world!");</code></pre>
+
+            <p data-en="Happy writing!" data-zh="祝写作愉快！">祝写作愉快！</p>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-en="&copy; 2026 Your Name." data-zh="&copy; 2026 你的名字。">&copy; 2026 你的名字。</p>
+        </div>
+    </footer>
+
+    <script src="../article.js"></script>
+</body>
+</html>

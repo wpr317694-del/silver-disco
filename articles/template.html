@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+  ========================================================================
+  文章模板 / Article Template
+  ------------------------------------------------------------------------
+  新写一篇文章的步骤：
+    1. 复制这个文件，改个文件名，例如：articles/my-post.html
+    2. 修改下面 <title>、文章标题、日期、正文内容
+    3. 双语：给元素加 data-en="..." data-zh="..." 即可支持中英切换
+       （如果某段只想写一种语言，不加 data-* 属性，切换语言时它保持不变）
+    4. 回到首页 index.html 的「文章 / Blog」区块，复制一张卡片，
+       把 href 指向你这篇文章的路径，例如 href="articles/my-post.html"
+    5. 提交推送到 GitHub，网站会自动更新
+  ========================================================================
+-->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 占位：文章标题（浏览器标签页显示） -->
+    <title data-en="Article Title" data-zh="文章标题">文章标题</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Portfolio</a>
+            <div class="nav-actions">
+                <a href="../index.html#blog" class="article-back" data-en="← All articles" data-zh="← 返回文章列表">← 返回文章列表</a>
+                <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+                    <span class="lang-option" data-lang="zh">中</span>
+                    <span class="lang-divider">/</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article -->
+    <article class="article">
+        <header class="article-header">
+            <!-- 占位：发布日期 -->
+            <div class="article-date" data-en="January 1, 2026" data-zh="2026年1月1日">2026年1月1日</div>
+            <!-- 占位：文章大标题 -->
+            <h1 class="article-title" data-en="Article Title" data-zh="文章标题">文章标题</h1>
+        </header>
+
+        <div class="article-body">
+            <!-- ====== 正文从这里开始，按需增删下面的元素 ====== -->
+
+            <p data-en="This is the opening paragraph. Introduce your topic here."
+               data-zh="这是开头段落，在这里介绍你要写的主题。">
+               这是开头段落，在这里介绍你要写的主题。
+            </p>
+
+            <h2 data-en="A Section Heading" data-zh="一个小标题">一个小标题</h2>
+            <p data-en="Write your content here. You can use paragraphs, headings, lists, quotes, code blocks, and images."
+               data-zh="在这里写你的内容。你可以使用段落、标题、列表、引用、代码块和图片。">
+               在这里写你的内容。你可以使用段落、标题、列表、引用、代码块和图片。
+            </p>
+
+            <ul>
+                <li data-en="A list item" data-zh="一个列表项">一个列表项</li>
+                <li data-en="Another list item" data-zh="另一个列表项">另一个列表项</li>
+            </ul>
+
+            <blockquote data-en="A memorable quote or an important note." data-zh="一句值得记住的话，或者一条重要提示。">
+                一句值得记住的话，或者一条重要提示。
+            </blockquote>
+
+            <h2 data-en="Code Example" data-zh="代码示例">代码示例</h2>
+            <pre><code>function hello() {
+    console.log("Hello, world!");
+}</code></pre>
+
+            <!-- 图片示例：把图片放到 articles/ 目录，然后用相对路径引用
+            <img src="my-image.jpg" alt="描述文字">
+            -->
+
+            <!-- ====== 正文到这里结束 ====== -->
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-en="&copy; 2026 Your Name." data-zh="&copy; 2026 你的名字。">&copy; 2026 你的名字。</p>
+        </div>
+    </footer>
+
+    <script src="../article.js"></script>
+</body>
+</html>

@@ -812,3 +812,134 @@ body.lang-zh {
         font-size: 0.8rem;
     }
 }
+
+
+/* ===== Article Page ===== */
+.article-back {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.article-back:hover {
+    color: var(--primary-light);
+}
+
+.article {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 140px 24px 80px;
+}
+
+.article-header {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.article-date {
+    font-size: 0.9rem;
+    color: var(--primary-light);
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.article-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.25;
+    background: linear-gradient(135deg, #fff, #cbd5e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.article-body {
+    font-size: 1.08rem;
+    color: var(--text-light);
+}
+
+.article-body h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 40px 0 16px;
+    color: var(--text);
+}
+
+.article-body h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 28px 0 12px;
+    color: var(--text);
+}
+
+.article-body p {
+    margin-bottom: 20px;
+}
+
+.article-body ul,
+.article-body ol {
+    margin: 0 0 20px 24px;
+    padding-left: 8px;
+}
+
+.article-body ul li {
+    list-style: disc;
+    margin-bottom: 8px;
+}
+
+.article-body ol li {
+    list-style: decimal;
+    margin-bottom: 8px;
+}
+
+.article-body a {
+    color: var(--primary-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.article-body blockquote {
+    margin: 28px 0;
+    padding: 16px 24px;
+    border-left: 4px solid var(--primary);
+    background: var(--bg-alt);
+    border-radius: 0 8px 8px 0;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.article-body pre {
+    background: #0d1117;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    overflow-x: auto;
+    margin: 0 0 24px;
+}
+
+.article-body pre code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9rem;
+    color: #e6edf3;
+    line-height: 1.6;
+}
+
+.article-body :not(pre) > code {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 0.9em;
+    color: var(--primary-light);
+}
+
+.article-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 24px 0;
+    display: block;
+}
