@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">Portfolio</a>
+            <a href="#" class="nav-logo">Your Name</a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link" data-en="Home" data-zh="首页">首页</a></li>
-                <li><a href="#about" class="nav-link" data-en="About" data-zh="关于">关于</a></li>
-                <li><a href="#skills" class="nav-link" data-en="Skills" data-zh="技能">技能</a></li>
-                <li><a href="#projects" class="nav-link" data-en="Projects" data-zh="项目">项目</a></li>
+                <li><a href="#work" class="nav-link" data-en="Work" data-zh="作品">作品</a></li>
                 <li><a href="#blog" class="nav-link" data-en="Blog" data-zh="文章">文章</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-zh="关于">关于</a></li>
                 <li><a href="#contact" class="nav-link" data-en="Contact" data-zh="联系">联系</a></li>
             </ul>
             <div class="nav-actions">
@@ -29,308 +28,162 @@
                     <span class="lang-option" data-lang="en">EN</span>
                 </button>
                 <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-container">
-            <div class="hero-content">
-                <p class="hero-greeting" data-en="Hello, I'm" data-zh="你好，我是">你好，我是</p>
-                <!-- 占位：把「你的名字」换成你的中文名，英文名放在 data-en -->
-                <h1 class="hero-name" data-en="Your Name" data-zh="你的名字">你的名字</h1>
-                <!-- 占位：你的职位 / 头衔 -->
-                <h2 class="hero-title" data-en="Your Title / Role" data-zh="你的职位 / 头衔">你的职位 / 头衔</h2>
-                <!-- 占位：一句话自我介绍 -->
-                <p class="hero-description"
-                   data-en="A short one-line introduction about yourself and what you do."
-                   data-zh="用一句话介绍你自己以及你所做的事情。">
-                    用一句话介绍你自己以及你所做的事情。
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary" data-en="View Projects" data-zh="查看项目">查看项目</a>
-                    <a href="#contact" class="btn btn-secondary" data-en="Contact Me" data-zh="联系我">联系我</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-avatar">
-                    <!-- 占位：把头像图片放这里，例如 <img src="avatar.jpg" alt="头像"> -->
-                    <div class="avatar-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <a href="#about" class="scroll-indicator">
-                <span data-en="Scroll Down" data-zh="向下滚动">向下滚动</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 5v14M5 12l7 7 7-7"/>
-                </svg>
-            </a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title" data-en="About Me" data-zh="关于我">关于我</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <!-- 占位：个人介绍第一段 -->
-                    <p data-en="Write a paragraph about yourself here — your background, what you're passionate about, and your professional focus."
-                       data-zh="在这里写一段关于你的介绍——你的背景、你热爱的事情，以及你的专业方向。">
-                        在这里写一段关于你的介绍——你的背景、你热爱的事情，以及你的专业方向。
-                    </p>
-                    <!-- 占位：个人介绍第二段 -->
-                    <p data-en="Add a second paragraph about your experience, interests, or what you're currently working on."
-                       data-zh="再写一段关于你的经历、兴趣，或你目前正在做的事情。">
-                        再写一段关于你的经历、兴趣，或你目前正在做的事情。
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">0+</span>
-                            <span class="stat-label" data-en="Years Experience" data-zh="年经验">年经验</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">0+</span>
-                            <span class="stat-label" data-en="Projects" data-zh="项目数">项目数</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">0+</span>
-                            <span class="stat-label" data-en="Technologies" data-zh="技术栈">技术栈</span>
-                        </div>
-                    </div>
-                </div>
+            <p class="hero-greeting" data-en="Hello, I'm" data-zh="你好，我是">你好，我是</p>
+            <!-- 占位：你的名字 -->
+            <h1 class="hero-name" data-en="Your Name" data-zh="你的名字">你的名字</h1>
+            <!-- 占位：你的职位 / 一句话定位 -->
+            <h2 class="hero-title" data-en="Full-stack developer crafting delightful digital experiences." data-zh="全栈开发者，专注打造出色的数字体验。">全栈开发者，专注打造出色的数字体验。</h2>
+            <!-- 占位：一句话自我介绍 -->
+            <p class="hero-description" data-en="I build things for the web and write about what I learn along the way." data-zh="我为 Web 构建东西，并把学到的东西写下来分享。">我为 Web 构建东西，并把学到的东西写下来分享。</p>
+            <div class="hero-buttons">
+                <a href="#work" class="btn btn-primary" data-en="View Work" data-zh="查看作品">查看作品</a>
+                <a href="#contact" class="btn btn-secondary" data-en="Get in Touch" data-zh="联系我">联系我</a>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="section section-alt" id="skills">
+    <!-- Bento Grid -->
+    <section class="bento-section" id="work">
         <div class="container">
-            <h2 class="section-title" data-en="Skills" data-zh="技能">技能</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
+            <div class="bento">
+                <!-- 占位：精选项目（大卡片） -->
+                <a class="box col-2 row-2" href="#">
+                    <div class="glow"></div>
+                    <div class="label" data-en="Featured Project" data-zh="精选项目">精选项目</div>
+                    <h3 data-en="Project One" data-zh="项目一">项目一</h3>
+                    <p data-en="Your flagship project — a longer description of what makes it special and the tech behind it." data-zh="你的旗舰项目——用更长的篇幅描述它的亮点和背后的技术栈。">你的旗舰项目——用更长的篇幅描述它的亮点和背后的技术栈。</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">PostgreSQL</span>
                     </div>
-                    <h3 data-en="Frontend" data-zh="前端">前端</h3>
-                    <!-- 占位：前端技能列表 -->
-                    <p data-en="e.g. HTML, CSS, JavaScript, React, Vue" data-zh="例如：HTML、CSS、JavaScript、React、Vue">例如：HTML、CSS、JavaScript、React、Vue</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                            <line x1="8" y1="21" x2="16" y2="21"/>
-                            <line x1="12" y1="17" x2="12" y2="21"/>
-                        </svg>
+                    <div class="project-links">
+                        <span class="project-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            <span data-en="Code" data-zh="代码">代码</span>
+                        </span>
+                        <span class="project-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            <span data-en="Demo" data-zh="演示">演示</span>
+                        </span>
                     </div>
-                    <h3 data-en="Backend" data-zh="后端">后端</h3>
-                    <!-- 占位：后端技能列表 -->
-                    <p data-en="e.g. Node.js, Python, Go, APIs" data-zh="例如：Node.js、Python、Go、API">例如：Node.js、Python、Go、API</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-                        </svg>
-                    </div>
-                    <h3 data-en="Database" data-zh="数据库">数据库</h3>
-                    <!-- 占位：数据库技能列表 -->
-                    <p data-en="e.g. PostgreSQL, MySQL, MongoDB" data-zh="例如：PostgreSQL、MySQL、MongoDB">例如：PostgreSQL、MySQL、MongoDB</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
-                            <line x1="4" y1="22" x2="4" y2="15"/>
-                        </svg>
-                    </div>
-                    <h3 data-en="Tools & DevOps" data-zh="工具与运维">工具与运维</h3>
-                    <!-- 占位：工具/运维技能列表 -->
-                    <p data-en="e.g. Docker, Git, AWS, Linux" data-zh="例如：Docker、Git、AWS、Linux">例如：Docker、Git、AWS、Linux</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <div class="container">
-            <h2 class="section-title" data-en="Projects" data-zh="项目">项目</h2>
-            <div class="projects-grid">
-                <!-- 占位：项目 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder" data-en="Project 1" data-zh="项目 1">项目 1</div>
-                    </div>
-                    <div class="project-info">
-                        <h3 data-en="Project Name" data-zh="项目名称">项目名称</h3>
-                        <p data-en="A short description of what this project does and the problem it solves."
-                           data-zh="简要描述这个项目的功能以及它解决的问题。">简要描述这个项目的功能以及它解决的问题。</p>
-                        <div class="project-tags">
-                            <span class="tag">Tag</span>
-                            <span class="tag">Tag</span>
-                            <span class="tag">Tag</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                                </svg>
-                                <span data-en="Code" data-zh="代码">代码</span>
-                            </a>
-                            <a href="#" class="project-link">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                    <polyline points="15 3 21 3 21 9"/>
-                                    <line x1="10" y1="14" x2="21" y2="3"/>
-                                </svg>
-                                <span data-en="Demo" data-zh="演示">演示</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- 占位：项目 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder" data-en="Project 2" data-zh="项目 2">项目 2</div>
-                    </div>
-                    <div class="project-info">
-                        <h3 data-en="Project Name" data-zh="项目名称">项目名称</h3>
-                        <p data-en="A short description of what this project does and the problem it solves."
-                           data-zh="简要描述这个项目的功能以及它解决的问题。">简要描述这个项目的功能以及它解决的问题。</p>
-                        <div class="project-tags">
-                            <span class="tag">Tag</span>
-                            <span class="tag">Tag</span>
-                            <span class="tag">Tag</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                                </svg>
-                                <span data-en="Code" data-zh="代码">代码</span>
-                            </a>
-                            <a href="#" class="project-link">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                    <polyline points="15 3 21 3 21 9"/>
-                                    <line x1="10" y1="14" x2="21" y2="3"/>
-                                </svg>
-                                <span data-en="Demo" data-zh="演示">演示</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- 占位：项目 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder" data-en="Project 3" data-zh="项目 3">项目 3</div>
-                    </div>
-                    <div class="project-info">
-                        <h3 data-en="Project Name" data-zh="项目名称">项目名称</h3>
-                        <p data-en="A short description of what this project does and the problem it solves."
-                           data-zh="简要描述这个项目的功能以及它解决的问题。">简要描述这个项目的功能以及它解决的问题。</p>
-                        <div class="project-tags">
-                            <span class="tag">Tag</span>
-                            <span class="tag">Tag</span>
-                            <span class="tag">Tag</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                                </svg>
-                                <span data-en="Code" data-zh="代码">代码</span>
-                            </a>
-                            <a href="#" class="project-link">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                    <polyline points="15 3 21 3 21 9"/>
-                                    <line x1="10" y1="14" x2="21" y2="3"/>
-                                </svg>
-                                <span data-en="Demo" data-zh="演示">演示</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog / Articles Section -->
-    <section class="section section-alt" id="blog">
-        <div class="container">
-            <h2 class="section-title" data-en="Blog" data-zh="文章">文章</h2>
-            <p class="section-subtitle"
-               data-en="Thoughts, notes, and articles I've written."
-               data-zh="我写的一些想法、笔记和文章。">我写的一些想法、笔记和文章。</p>
-            <div class="blog-grid">
-                <!--
-                  新增文章：复制下面这个 <a class="blog-card"> 卡片，
-                  把 href 改成你的文章路径（如 articles/my-post.html），
-                  再改日期、标题、摘要即可。最新的文章放在最上面。
-                -->
-                <a href="articles/hello-world.html" class="blog-card">
-                    <div class="blog-date" data-en="July 10, 2026" data-zh="2026年7月10日">2026年7月10日</div>
-                    <h3 class="blog-title" data-en="Hello World — My First Post" data-zh="Hello World —— 我的第一篇文章">Hello World —— 我的第一篇文章</h3>
-                    <p class="blog-excerpt"
-                       data-en="A sample article showing how posts look and how to add your own."
-                       data-zh="一篇示例文章，展示文章的样子以及如何添加你自己的文章。">一篇示例文章，展示文章的样子以及如何添加你自己的文章。</p>
-                    <span class="blog-readmore" data-en="Read more →" data-zh="阅读全文 →">阅读全文 →</span>
                 </a>
+
+                <!-- 占位：数据统计 -->
+                <div class="box col-2">
+                    <div class="big-num">0+</div>
+                    <p data-en="Years of experience" data-zh="年开发经验">年开发经验</p>
+                </div>
+
+                <!-- 占位：项目二 -->
+                <a class="box" href="#">
+                    <h3 data-en="Project Two" data-zh="项目二">项目二</h3>
+                    <p data-en="Short description." data-zh="简短描述。">简短描述。</p>
+                </a>
+
+                <!-- 占位：项目三 -->
+                <a class="box" href="#">
+                    <h3 data-en="Project Three" data-zh="项目三">项目三</h3>
+                    <p data-en="Short description." data-zh="简短描述。">简短描述。</p>
+                </a>
+
+                <!-- 最新文章（链接到真实文章） -->
+                <a class="box col-2" href="#blog">
+                    <div class="label" data-en="Latest Writing" data-zh="最新文章">最新文章</div>
+                    <div class="postrow" style="border-top:none;">
+                        <span class="pt" data-en="Hello World — My First Post" data-zh="Hello World —— 我的第一篇文章">Hello World —— 我的第一篇文章</span>
+                        <span class="pd">2026-07-10</span>
+                    </div>
+                    <div class="box-cta" data-en="View all articles →" data-zh="查看全部文章 →">查看全部文章 →</div>
+                </a>
+
+                <!-- 技术栈 -->
+                <div class="box col-2">
+                    <div class="label" data-en="Tech Stack" data-zh="技术栈">技术栈</div>
+                    <!-- 占位：技术栈标签 -->
+                    <div class="chips">
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">TypeScript</span>
+                        <span class="chip">React</span>
+                        <span class="chip">Node.js</span>
+                        <span class="chip">Python</span>
+                        <span class="chip">Go</span>
+                        <span class="chip">Docker</span>
+                        <span class="chip">AWS</span>
+                    </div>
+                </div>
+
+                <!-- 关于我 -->
+                <div class="box col-4" id="about">
+                    <div class="label" data-en="About Me" data-zh="关于我">关于我</div>
+                    <!-- 占位：个人介绍 -->
+                    <p data-en="A short paragraph about you — your background, interests, and what you're focused on right now. Add a second sentence to give visitors a sense of who you are and what drives you." data-zh="一段关于你的简短介绍——你的背景、兴趣，以及你目前专注的方向。再加一句话，让访客了解你是谁、是什么驱动着你。">一段关于你的简短介绍——你的背景、兴趣，以及你目前专注的方向。再加一句话，让访客了解你是谁、是什么驱动着你。</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
+    <!-- Blog list section (full article list) -->
+    <section class="bento-section" id="blog" style="padding-top:0;">
         <div class="container">
-            <h2 class="section-title" data-en="Get In Touch" data-zh="联系我">联系我</h2>
-            <div class="contact-content">
-                <p class="contact-description"
-                   data-en="I'm always open to new opportunities and interesting conversations. Feel free to reach out!"
-                   data-zh="我随时欢迎新的机会和有趣的交流，欢迎联系我！">我随时欢迎新的机会和有趣的交流，欢迎联系我！</p>
-                <div class="contact-links">
-                    <!-- 占位：邮箱地址 -->
-                    <a href="mailto:your.email@example.com" class="contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        <span>your.email@example.com</span>
-                    </a>
-                    <!-- 占位：GitHub 链接 -->
-                    <a href="https://github.com/wpr317694-del" target="_blank" class="contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                        </svg>
-                        <span>GitHub</span>
-                    </a>
-                    <!-- 占位：其它社交/联系方式（可选） -->
-                    <a href="#" class="contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                            <rect x="2" y="9" width="4" height="12"/>
-                            <circle cx="4" cy="4" r="2"/>
-                        </svg>
-                        <span data-en="LinkedIn / Other" data-zh="领英 / 其它">领英 / 其它</span>
-                    </a>
+            <div class="section-heading">
+                <h2 data-en="Blog" data-zh="文章">文章</h2>
+            </div>
+            <div class="bento">
+                <!--
+                  新增文章：复制下面这个 <a class="box col-2"> 卡片，
+                  把 href 改成你的文章路径（如 articles/my-post.html），
+                  再改日期、标题、摘要即可。
+                -->
+                <a class="box col-2" href="articles/hello-world.html">
+                    <div class="label">2026-07-10</div>
+                    <h3 data-en="Hello World — My First Post" data-zh="Hello World —— 我的第一篇文章">Hello World —— 我的第一篇文章</h3>
+                    <p data-en="A sample article showing how posts look and how to add your own." data-zh="一篇示例文章，展示文章的样子以及如何添加你自己的文章。">一篇示例文章，展示文章的样子以及如何添加你自己的文章。</p>
+                    <div class="box-cta" data-en="Read more →" data-zh="阅读全文 →">阅读全文 →</div>
+                </a>
+                <!-- 占位：更多文章卡片可继续往下加 -->
+                <div class="box col-2" style="justify-content:center; align-items:center; text-align:center; border-style:dashed;">
+                    <p data-en="More articles coming soon..." data-zh="更多文章即将到来……">更多文章即将到来……</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="bento-section" id="contact" style="padding-top:0;">
+        <div class="container">
+            <div class="section-heading">
+                <h2 data-en="Get In Touch" data-zh="联系我">联系我</h2>
+            </div>
+            <div class="bento">
+                <div class="box col-4">
+                    <p data-en="I'm always open to new opportunities and interesting conversations. Feel free to reach out!" data-zh="我随时欢迎新的机会和有趣的交流，欢迎联系我！">我随时欢迎新的机会和有趣的交流，欢迎联系我！</p>
+                    <div class="contact-list">
+                        <!-- 占位：邮箱 -->
+                        <a href="mailto:your.email@example.com" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>your.email@example.com</span>
+                        </a>
+                        <!-- 占位：GitHub -->
+                        <a href="https://github.com/wpr317694-del" target="_blank" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            <span>GitHub</span>
+                        </a>
+                        <!-- 占位：其它（可选） -->
+                        <a href="#" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            <span data-en="LinkedIn / Other" data-zh="领英 / 其它">领英 / 其它</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,31 +2,25 @@
 const LANG_KEY = 'preferred-lang';
 
 function applyLanguage(lang) {
-    // Update every element that has translations
     document.querySelectorAll('[data-en][data-zh]').forEach(el => {
         const value = el.getAttribute('data-' + lang);
         if (value !== null) {
-            // Support entities like &copy; by using innerHTML
             el.innerHTML = value;
         }
     });
 
-    // Update <html lang> and page direction
     document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
     document.body.classList.toggle('lang-zh', lang === 'zh');
     document.body.classList.toggle('lang-en', lang === 'en');
 
-    // Highlight active option in the toggle
     document.querySelectorAll('.lang-option').forEach(opt => {
         opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
     });
 
-    // Persist choice
     localStorage.setItem(LANG_KEY, lang);
 }
 
 function initLanguage() {
-    // Priority: saved choice > browser language > default zh
     let lang = localStorage.getItem(LANG_KEY);
     if (!lang) {
         lang = (navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en';
@@ -46,7 +40,7 @@ function initLanguage() {
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 30) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
@@ -57,12 +51,13 @@ window.addEventListener('scroll', () => {
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 
-navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
-// Close menu when clicking a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navToggle.classList.remove('active');
@@ -75,13 +70,11 @@ const sections = document.querySelectorAll('section[id]');
 
 function updateActiveNav() {
     const scrollY = window.pageYOffset;
-
     sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-
+        const id = section.getAttribute('id');
+        const navLink = document.querySelector(`.nav-link[href="#${id}"]`);
         if (navLink) {
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                 navLink.classList.add('active');
@@ -96,10 +89,7 @@ window.addEventListener('scroll', updateActiveNav);
 
 // ===== Scroll Animations =====
 function initScrollAnimations() {
-    const elements = document.querySelectorAll(
-        '.skill-card, .project-card, .blog-card, .stat, .contact-item, .about-text'
-    );
-
+    const elements = document.querySelectorAll('.box, .hero-container');
     elements.forEach(el => el.classList.add('fade-in'));
 
     const observer = new IntersectionObserver(
@@ -110,16 +100,13 @@ function initScrollAnimations() {
                 }
             });
         },
-        {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        }
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
 
     elements.forEach(el => observer.observe(el));
 }
 
-// ===== Smooth Scroll for Safari =====
+// ===== Smooth Scroll =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -127,10 +114,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(href);
         if (target) {
             e.preventDefault();
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
